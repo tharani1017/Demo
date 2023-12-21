@@ -1,0 +1,10 @@
+<div *ngIf="selectedOffice">
+    <h2>Office Details</h2>
+    <p><strong>ID:</strong> {{ selectedOffice.id }}</p>
+    <p><strong>Name:</strong> {{ selectedOffice.name }}</p>
+    <p><strong>No. of Employees:</strong> {{ selectedOffice.no_of_employee }}</p>
+    <p><strong>Location:</strong> {{ selectedOffice.location }}</p>
+    <p><strong>Office Type:</strong> {{ selectedOffice.office_type }}</p>
+    <button (click)="goHome()">Home</button>
+    
+  </div>

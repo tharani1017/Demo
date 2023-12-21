@@ -1,0 +1,36 @@
+<!-- view-list-form.component.html -->
+<div>
+    <h1>View List</h1>
+    <table border="5">
+
+              <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>No. of Employees</th>
+          <th>Location</th>
+          <th>Office Type</th>
+          <th>Options</th>
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let office of offices; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ office.name }}</td>
+          <td>{{ office.no_of_employee }}</td>
+          <td>{{ office.location }}</td>
+          <td>{{ office.office_type }}</td>
+          <td>
+            <button (click)="updateOffice(office.id)">UPDATE</button>
+            <button (click)="onDeleteClick(office.id)">DELETE</button>
+            <button (click)="viewOffice(office.id)">View</button>        
+
+          </td>
+          
+        </tr>
+      </tbody>
+      <br>
+      <button (click)="goToAddDetails()">Add Details</button>
+    </table>
+  </div>
